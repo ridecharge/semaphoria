@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20140619212652) do
     t.integer  "environment_id"
     t.integer  "app_id"
     t.integer  "user_id"
-    t.boolean  "active"
+    t.boolean  "active",         default: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end

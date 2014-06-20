@@ -4,7 +4,7 @@ class CreateLocks < ActiveRecord::Migration
       t.references :environment, index: true
       t.references :app, index: true
       t.references :user, index: true
-      t.boolean :active
+      t.boolean :active, default: true
 
       t.timestamps
     end
