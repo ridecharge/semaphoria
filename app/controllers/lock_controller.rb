@@ -1,5 +1,7 @@
 class LockController < ApplicationController
 
+  skip_before_filter :verify_authenticity_token
+
   def lock_status
     params.require(:app)
     params.require(:environment)
