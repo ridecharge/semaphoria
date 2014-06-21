@@ -1,28 +1,26 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic Rails app that could provide some sense of coordination for development. 
 
-Things you may want to cover:
+If you can't just spin up environments on demand, then if you have more developers and QA than viable 
+environments, there is contention for the resource. Let's try doing for this problem what we do with other
+race conditions, and applying a locking mechanism. 
 
-* Ruby version
+This application is more of a proof of concept than what such a design should necessarily look like. 
+Feedback is encouraged. 
 
-* System dependencies
+Potential future steps include 
+- integration with deployment tools (IE Capistrano) - the act of deployment could set this automatically. 
+- integration with automated regression - if you have an automated regression, you don't want anyone
+deploying to that environment while that is happening.
+- Tracking what builds are deployed to where.
+- Tracking amalgamated branches 
 
-* Configuration
+It is possible that this is solving the wrong problem. Ideally, you could spin up any *ecosystem* seeded for a
+data set and activity locally at any time and non-localized environments would really be restricted to 
+demonstration purposes, although there are tools available to work around even that. This seems like a much 
+more ambitious activity. While creating the One Chefified Vagrant to Rule Them All is the best possible scenario,
+it also requires cultural buy in since it is a shift in approaching testing. 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Even then, there's some desire for a deployment manager - you would want to start up different services with
+different versions and seeds depending on what you're trying to do. What would that look like? 
