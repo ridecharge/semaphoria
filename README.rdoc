@@ -1,5 +1,8 @@
 == README
 
+Ruby - 2.1.0
+Rails - 4.1.0 
+
 This is a basic Rails app that could provide some sense of coordination for development. 
 
 If you can't just spin up environments on demand, then if you have more developers and QA than viable 
