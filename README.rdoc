@@ -27,3 +27,29 @@ it also requires cultural buy in since it is a shift in approaching testing.
 
 Even then, there's some desire for a deployment manager - you would want to start up different services with
 different versions and seeds depending on what you're trying to do. What would that look like? 
+
+== Commands
+
+==== lockstatus
+Get the status of an app/env
+
+```
+lockstatus rc:release
+# rc in release was locked by Jonathan Calvert at 2014-06-24T15:03:28.570Z
+```
+
+==== lock
+Lock an app/env
+
+```
+lock rc:release
+# rc in release was locked
+```
+
+==== unlock
+Unlock an app/env
+
+```
+unlock rc:release
+# fleet in release was unlocked
+```
