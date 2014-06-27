@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: http://semaphoria.herokuapp.com/lock
+    body:
+      encoding: UTF-8
+      string: "{\"app\":\"god\",\"environment\":\"automate\"}"
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 Jun 2014 21:01:11 GMT
+      Etag:
+      - "\"7215ee9c7d9dc229d2921a40e899ec5f\""
+      Set-Cookie:
+      - request_method=DELETE; path=/
+      Status:
+      - 200 OK
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 6fb21876-c848-4674-829e-a34b533ebd0f
+      X-Runtime:
+      - '0.234262'
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version: 
+  recorded_at: Fri, 27 Jun 2014 21:01:11 GMT
+- request:
+    method: get
+    uri: http://semaphoria.herokuapp.com/lock_status?app=god&environment=automate
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 27 Jun 2014 21:01:11 GMT
+      Etag:
+      - "\"6f6e7c063e5c06b29af6e988be769bec\""
+      Set-Cookie:
+      - request_method=GET; path=/
+      Status:
+      - 200 OK
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 491c5401-fa41-415d-9642-366010ebcb7a
+      X-Runtime:
+      - '0.013904'
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "{\"locked\":false}"
+    http_version: 
+  recorded_at: Fri, 27 Jun 2014 21:01:11 GMT
+recorded_with: VCR 2.9.2

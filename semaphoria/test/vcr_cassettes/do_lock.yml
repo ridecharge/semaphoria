@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://semaphoria.herokuapp.com/lock
+    body:
+      encoding: UTF-8
+      string: "{\"app\":\"god\",\"environment\":\"automate\",\"user\":\"foobar\"}"
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 Jun 2014 20:55:02 GMT
+      Etag:
+      - "\"7215ee9c7d9dc229d2921a40e899ec5f\""
+      Set-Cookie:
+      - request_method=POST; path=/
+      Status:
+      - 200 OK
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 013d3980-8c1a-41f5-8b49-a03ad9037476
+      X-Runtime:
+      - '0.214010'
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version: 
+  recorded_at: Fri, 27 Jun 2014 20:55:02 GMT
+- request:
+    method: get
+    uri: http://semaphoria.herokuapp.com/lock_status?app=god&environment=automate
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 27 Jun 2014 20:55:02 GMT
+      Etag:
+      - "\"48d4f453d199d236ab9faac78fe22c88\""
+      Set-Cookie:
+      - request_method=GET; path=/
+      Status:
+      - 200 OK
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - cfe410a7-4918-47e6-b333-657cab4e272d
+      X-Runtime:
+      - '0.027652'
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "{\"locked\":true,\"at\":\"2014-06-27T20:55:02.371Z\",\"by\":\"foobar\"}"
+    http_version: 
+  recorded_at: Fri, 27 Jun 2014 20:55:02 GMT
+recorded_with: VCR 2.9.2
