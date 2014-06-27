@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'lock_status' => 'lock'
   post 'lock' => 'lock#create'
   put 'lock' => 'lock#release'
+  delete 'lock' => 'lock#release'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
