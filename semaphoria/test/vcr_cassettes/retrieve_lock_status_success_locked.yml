@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://semaphoria.herokuapp.com/lock_status?app=god&environment=automate
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 27 Jun 2014 19:25:53 GMT
+      Etag:
+      - "\"395fb9e6217edbb16b34239432f1b69e\""
+      Set-Cookie:
+      - request_method=GET; path=/
+      Status:
+      - 200 OK
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - c2021614-1e87-4cac-86f5-4c83667f3edc
+      X-Runtime:
+      - '0.018034'
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "{\"locked\":true,\"at\":\"2014-06-27T19:22:02.843Z\",\"by\":\"jcalvert\"}"
+    http_version: 
+  recorded_at: Fri, 27 Jun 2014 19:25:53 GMT
+recorded_with: VCR 2.9.2
