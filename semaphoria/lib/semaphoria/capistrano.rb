@@ -51,7 +51,6 @@ class Semaphoria::CapCheck < Struct.new(:app_name,:env_name,:user, :logger,:endp
   
   def initialize(app_name, env_name, user,logger=Logger.new(STDOUT), endpoint=URI("http://semaphoria.herokuapp.com"))
     super(app_name, env_name, user, logger, endpoint)
-    semaphore = Semaphoria::Client.new(:host => "semaphoria.herokuapp.com", :scheme => "http")
     @semaphore = Semaphoria::Client.new(:host => endpoint.host, :scheme => endpoint.scheme)
   end
   def status
