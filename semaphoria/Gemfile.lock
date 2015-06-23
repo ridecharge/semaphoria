@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    semaphoria (0.0.1)
+    semaphoria (0.0.2)
       addressable
       httparty
 
